@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="login-pane" fx:id="loginPane" prefHeight="408.0" prefWidth="425.0" stylesheets="@../css/Styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.xpx.main.controller.LoginController">
+   <children>
+      <ImageView fitHeight="181.0" fitWidth="241.0" layoutX="123.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Proximax-Shield-Logo1-rgb.png" />
+         </image>
+      </ImageView>
+      <Pane id="sidebar" prefHeight="53.0" prefWidth="425.0" stylesheets="@../css/Styles.css">
+         <children>
+            <Label layoutX="171.0" layoutY="14.0" text="Welcome" textFill="WHITE">
+               <font>
+                  <Font name="Lato Regular" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton id="login-pane-btn" layoutX="91.0" layoutY="306.0" onAction="#login" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Start Sharing Files">
+         <font>
+            <Font name="Lato Regular" size="17.0" />
+         </font>
+      </JFXButton>
+      <Line endX="100.0" layoutX="82.0" layoutY="517.0" opacity="0.6" startX="10.0" stroke="#a39e9e" />
+   </children>
+</Pane>

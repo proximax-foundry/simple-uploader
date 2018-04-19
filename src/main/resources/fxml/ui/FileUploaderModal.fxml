@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="1075.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.xpx.main.controller.UploadModalController">
+   <children>
+      <Pane id="top-pane" prefHeight="42.0" prefWidth="1075.0" stylesheets="@../css/Styles.css">
+         <children>
+            <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="1034.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Proximax-Shield-Logo1-rgb.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <TabPane layoutX="8.0" layoutY="47.0" prefHeight="404.0" prefWidth="1061.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="Upload">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="hash" editable="false" focusColor="#eb6101" layoutX="17.0" layoutY="233.0" prefHeight="42.0" prefWidth="1028.0" promptText="NEM Hash to be shown here">
+                           <font>
+                              <Font name="Lato Regular" size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <ProgressBar fx:id="progressBar" layoutX="17.0" layoutY="198.0" prefHeight="18.0" prefWidth="1028.0" progress="0.0" />
+                        <JFXButton id="login-pane-btn" layoutX="17.0" layoutY="40.0" onAction="#loadFileChooser" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Browse...">
+                           <font>
+                              <Font name="Lato Regular" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="fileName" layoutX="285.0" layoutY="46.0" prefHeight="42.0" prefWidth="762.0">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox disable="true" layoutX="24.0" layoutY="222.0" prefHeight="18.0" prefWidth="124.0" text="Encrypted" visible="false">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXTextField fx:id="hash2" disable="true" editable="false" focusColor="#eb6101" layoutX="155.0" layoutY="215.0" prefHeight="42.0" prefWidth="260.0" visible="false">
+                           <font>
+                              <Font name="Lato Regular" size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="login-pane-btn" layoutX="780.0" layoutY="291.0" onAction="#uploadfileChooser" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Upload">
+                           <font>
+                              <Font name="Lato Regular" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="hash1" focusColor="#eb6101" layoutX="14.0" layoutY="109.0" prefHeight="42.0" prefWidth="1028.0" promptText="Description">
+                           <font>
+                              <Font name="Lato Regular" size="19.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Look up by Hash">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="searchHash" focusColor="#eb6101" layoutX="22.0" layoutY="128.0" prefHeight="42.0" prefWidth="1018.0" promptText="NEM Hash Here">
+                           <font>
+                              <Font name="Lato Regular" size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <ChoiceBox fx:id="gateways" layoutX="779.0" layoutY="45.0" prefHeight="36.0" prefWidth="261.0" />
+                        <Label layoutX="688.0" layoutY="49.0" text="Gateway">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="login-pane-btn" layoutX="22.0" layoutY="37.0" onAction="#mashLinks" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Search P2P Network">
+                           <font>
+                              <Font name="Lato Regular" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <WebView fx:id="webView" layoutX="22.0" layoutY="194.0" prefHeight="167.0" prefWidth="1026.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Look by Search/Keyword">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton id="login-pane-btn" layoutX="797.0" layoutY="14.0" onAction="#mashLinks" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Search P2P Network">
+                           <font>
+                              <Font name="Lato Regular" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="searchHash1" focusColor="#eb6101" layoutX="22.0" layoutY="20.0" prefHeight="42.0" prefWidth="744.0" promptText="Search Key">
+                           <font>
+                              <Font name="Lato Regular" size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <TableView layoutX="14.0" layoutY="88.0" prefHeight="274.0" prefWidth="1031.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/Styles.css" />
+      <URL value="@../css/Styles.css" />
+   </stylesheets>
+</AnchorPane>

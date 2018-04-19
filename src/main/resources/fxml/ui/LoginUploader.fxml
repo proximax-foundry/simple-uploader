@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="login-pane" fx:id="loginPane" prefHeight="638.0" prefWidth="425.0" stylesheets="@../css/Styles.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.xpx.main.controller.LoginController" >
+   <children>
+      <JFXTextField focusColor="#78b6e4" layoutX="90.0" layoutY="367.0" prefHeight="38.0" prefWidth="244.0" promptText="Password">
+         <font>
+            <Font name="Lato Regular" size="19.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="181.0" fitWidth="241.0" layoutX="130.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Proximax-Shield-Logo1-rgb.png" />
+         </image>
+      </ImageView>
+      <Pane id="sidebar" prefHeight="53.0" prefWidth="425.0" stylesheets="@../css/Styles.css">
+         <children>
+            <Label layoutX="171.0" layoutY="14.0" text="Welcome" textFill="WHITE">
+               <font>
+                  <Font name="Lato Regular" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField focusColor="#eb6101" layoutX="90.0" layoutY="319.0" prefHeight="38.0" prefWidth="244.0" promptText="Username">
+         <font>
+            <Font name="Lato Regular" size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton onAction="#login" id="login-pane-btn" layoutX="91.0" layoutY="443.0" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Login">
+         <font>
+            <Font name="Lato Regular" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="login-pane-btn" fx:id="loginButton"  layoutX="91.0" layoutY="539.0" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Register" onAction="#register">
+         <font>
+            <Font name="Lato Regular" size="17.0" />
+         </font>
+      </JFXButton>
+      <Line endX="100.0" layoutX="82.0" layoutY="517.0" opacity="0.6" startX="10.0" stroke="#a39e9e" />
+      <Line endX="100.0" layoutX="234.0" layoutY="517.0" opacity="0.6" startX="10.0" stroke="#a39e9e" />
+      <Label layoutX="205.0" layoutY="507.0" text="or" textFill="#4a4949">
+         <font>
+            <Font name="Lato Regular" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
