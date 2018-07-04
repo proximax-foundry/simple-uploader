@@ -2,12 +2,14 @@ package proxiupload;
 
 import java.io.IOException;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class DaemonRunTest {
 
 	
 	@Test
+	@Ignore
 	public void testProximaxDaemon() {
 		try {
 			String cmd = "ipfs daemon";

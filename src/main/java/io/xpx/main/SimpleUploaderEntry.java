@@ -12,16 +12,19 @@ import javafx.stage.Stage;
 public class SimpleUploaderEntry extends Application {
 
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws InterruptedException {
 		try {
-
+			
+			runNode();
+			System.out.println("App loading...");
+			Thread.sleep(10000);
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ui/SplashLog.fxml"));
 			Parent root;
 			root = loader.load();
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			runNode();
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

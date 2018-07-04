@@ -8,14 +8,7 @@ import org.nem.core.node.NodeEndpoint;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
-import io.nem.ApiException;
-import io.nem.xpx.builder.UploadFileParameterBuilder;
-import io.nem.xpx.facade.Upload;
-import io.nem.xpx.facade.connection.LocalHttpPeerConnection;
-import io.nem.xpx.facade.model.UploadData;
-import io.nem.xpx.model.PeerConnectionNotFoundException;
-import io.nem.xpx.model.UploadException;
-import io.nem.xpx.model.UploadFileParameter;
+import io.nem.xpx.exceptions.ApiException;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,7 +33,7 @@ public class ImageLoaderController extends AbstractController implements Initial
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		webView.getEngine().load("https://localhost:8881/download/file?nemHash=511ad868fe67f315f30b5962aa285deabd71e59aa8801dbe3846e9b1ff633f3f&transferMode=bytes");
+		webView.getEngine().load("https://testnet:8881/download/file?nemHash=511ad868fe67f315f30b5962aa285deabd71e59aa8801dbe3846e9b1ff633f3f&transferMode=bytes");
 	}
 
 	public void loadImage(Event event) throws ApiException {

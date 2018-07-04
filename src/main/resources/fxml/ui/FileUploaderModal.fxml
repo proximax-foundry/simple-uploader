@@ -37,18 +37,16 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <JFXTextField fx:id="hash" editable="false" focusColor="#eb6101" layoutX="17.0" layoutY="233.0" prefHeight="42.0" prefWidth="1028.0" promptText="NEM Hash to be shown here">
-                           <font>
-                              <Font name="Lato Regular" size="19.0" />
-                           </font>
-                        </JFXTextField>
+                        <JFXTextField fx:id="hash" editable="false" focusColor="#eb6101" layoutX="17.0" layoutY="291.0" prefHeight="42.0" prefWidth="718.0" promptText="DFMS Data Hash" />
+                          <JFXTextField fx:id="nemHash" focusColor="#eb6101" layoutX="17.0" layoutY="229.0" prefHeight="42.0" prefWidth="715.0" promptText="NEM Hash" />
+                          
                         <ProgressBar fx:id="progressBar" layoutX="17.0" layoutY="198.0" prefHeight="18.0" prefWidth="1028.0" progress="0.0" />
-                        <JFXButton id="login-pane-btn" layoutX="17.0" layoutY="40.0" onAction="#loadFileChooser" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Browse...">
+                        <JFXButton id="login-pane-btn" layoutX="14.0" layoutY="55.0" onAction="#loadFileChooser" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Browse...">
                            <font>
                               <Font name="Lato Regular" size="17.0" />
                            </font>
                         </JFXButton>
-                        <Label fx:id="fileName" layoutX="285.0" layoutY="46.0" prefHeight="42.0" prefWidth="762.0">
+                        <Label fx:id="fileName" layoutX="17.0" layoutY="136.0" prefHeight="42.0" prefWidth="762.0">
                            <font>
                               <Font size="19.0" />
                            </font>
@@ -58,74 +56,33 @@
                               <Font size="19.0" />
                            </font>
                         </JFXCheckBox>
-                        <JFXTextField fx:id="hash2" disable="true" editable="false" focusColor="#eb6101" layoutX="155.0" layoutY="215.0" prefHeight="42.0" prefWidth="260.0" visible="false">
-                           <font>
-                              <Font name="Lato Regular" size="19.0" />
-                           </font>
-                        </JFXTextField>
                         <JFXButton id="login-pane-btn" layoutX="780.0" layoutY="291.0" onAction="#uploadfileChooser" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Upload">
                            <font>
                               <Font name="Lato Regular" size="17.0" />
                            </font>
                         </JFXButton>
-                        <JFXTextField fx:id="hash1" focusColor="#eb6101" layoutX="14.0" layoutY="109.0" prefHeight="42.0" prefWidth="1028.0" promptText="Description">
+                        <Label layoutX="695.0" layoutY="14.0" prefHeight="35.0" prefWidth="352.0" text="Just a simple ProximaX Uploader">
                            <font>
-                              <Font name="Lato Regular" size="19.0" />
-                           </font>
-                        </JFXTextField>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab closable="false" text="Look up by Hash">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <JFXTextField fx:id="searchHash" focusColor="#eb6101" layoutX="22.0" layoutY="128.0" prefHeight="42.0" prefWidth="1018.0" promptText="NEM Hash Here">
-                           <font>
-                              <Font name="Lato Regular" size="19.0" />
-                           </font>
-                        </JFXTextField>
-                        <ChoiceBox fx:id="gateways" layoutX="779.0" layoutY="45.0" prefHeight="36.0" prefWidth="261.0" />
-                        <Label layoutX="688.0" layoutY="49.0" text="Gateway">
-                           <font>
-                              <Font size="19.0" />
+                              <Font size="24.0" />
                            </font>
                         </Label>
-                        <JFXButton id="login-pane-btn" layoutX="22.0" layoutY="37.0" onAction="#mashLinks" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Search P2P Network">
+                        <Label layoutX="357.0" layoutY="54.0" text="Public Key: 36e6fbc1cc5c3ef49d313721650b98d7d7d126a4f731d70071f4f3b4798cdc85">
                            <font>
-                              <Font name="Lato Regular" size="17.0" />
+                              <Font size="18.0" />
                            </font>
-                        </JFXButton>
-                        <WebView fx:id="webView" layoutX="22.0" layoutY="194.0" prefHeight="167.0" prefWidth="1026.0" />
+                        </Label>
+                        <Label fx:id="peerId" layoutX="357.0" layoutY="88.0" text="Peer ID:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+             
+                      
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab closable="false" text="Look by Search/Keyword">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <JFXButton id="login-pane-btn" layoutX="797.0" layoutY="14.0" onAction="#mashLinks" prefHeight="53.0" prefWidth="244.0" stylesheets="@../css/Styles.css" text="Search P2P Network">
-                           <font>
-                              <Font name="Lato Regular" size="17.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXTextField fx:id="searchHash1" focusColor="#eb6101" layoutX="22.0" layoutY="20.0" prefHeight="42.0" prefWidth="744.0" promptText="Search Key">
-                           <font>
-                              <Font name="Lato Regular" size="19.0" />
-                           </font>
-                        </JFXTextField>
-                        <TableView layoutX="14.0" layoutY="88.0" prefHeight="274.0" prefWidth="1031.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
-                          </columns>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
+          
         </tabs>
       </TabPane>
    </children>

@@ -62,7 +62,11 @@ public class LoginController extends AbstractController implements Initializable
 			loginPane.getScene().getWindow().hide();
 
 		} catch (IOException e) {
-			e.printStackTrace();
+			alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Initializing..");
+			alert.setContentText("Initializing Daemon... please try again..");
+			alert.show();
+			
 		}
 	}
 

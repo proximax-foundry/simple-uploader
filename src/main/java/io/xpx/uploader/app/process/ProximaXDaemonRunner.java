@@ -5,22 +5,22 @@ import java.io.IOException;
 public class ProximaXDaemonRunner implements Runnable {
 	private static String OS = System.getProperty("os.name").toLowerCase();
 
+
 	@Override
 	public void run() {
 
 		try {
-			String cmd = "cmd runp2p.bat";
+			String cmd = "runp2p.bat";
 			if (isUnix() || isMac()) {
 				cmd = "./proximax daemon &> proximax.out &";
 			}
 			// assumes that ipfs is already installed.
-			Process p = Runtime.getRuntime().exec(cmd);
-			p.waitFor();
-		} catch (IOException e) {
+			//Process p = Runtime.getRuntime().exec(cmd);
+			Process process = new ProcessBuilder(cmd).start();
+			process.waitFor();
+		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		} 
 	}
 
 	private static boolean isWindows() {
