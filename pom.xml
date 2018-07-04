@@ -51,7 +51,11 @@
 									<fileset dir="${basedir}/src/main/resources/node/"
 										includes="proximax.exe" />
 									<fileset dir="${basedir}/src/main/resources/node/"
+										includes="proximax" />
+									<fileset dir="${basedir}/src/main/resources/node/"
 										includes="runp2p.bat" />
+										<fileset dir="${basedir}/src/main/resources/node/"
+										includes="runp2p.sh" />
 								</copy>
 							</tasks>
 						</configuration>
