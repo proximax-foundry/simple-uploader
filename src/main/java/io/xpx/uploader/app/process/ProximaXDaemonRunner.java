@@ -12,7 +12,7 @@ public class ProximaXDaemonRunner implements Runnable {
 		try {
 			String cmd = "runp2p.bat";
 			if (isUnix() || isMac()) {
-				cmd = "./proximax daemon &> proximax.out &";
+				cmd = "./runp2p.sh";
 			}
 			// assumes that ipfs is already installed.
 			//Process p = Runtime.getRuntime().exec(cmd);
